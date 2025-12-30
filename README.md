@@ -6,7 +6,6 @@ A web application that converts text into ASCII art using different banner style
 
 ## Authors
 
-- Mohammed Amine El Bouziani (@melbouzi)
 - Elmehdi Rezoug (@erezzoug)
 - Aymane Bouzerda (@abouzerd)
 
