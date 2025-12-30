@@ -1,8 +1,8 @@
-# ASCII Art Web Stylize
+# ASCII Art Web Dockerize
 
 ## Description
 
-A web application that converts text into ASCII art using different banner styles. Built with Go and HTML and CSS, featuring a clean interface for transforming text into stylized ASCII representations.
+A web application that converts text into ASCII art using different banner styles. Built with Go and HTML and CSS and Docker, featuring a clean interface for transforming text into stylized ASCII representations.
 
 ## Authors
 
@@ -15,9 +15,10 @@ A web application that converts text into ASCII art using different banner style
 ### Running the Server
 
 ```bash
-git clone https://learn.zone01oujda.ma/git/erezzoug/ascii-art-web-stylize
-cd ascii-art-web-stylize
-go run .
+git clone https://learn.zone01oujda.ma/git/erezzoug/ascii-art-web-dockerize
+cd ascii-art-web-dockerize
+docker build -t ascii-art-web-dockerize .
+docker run -d -p 8080:8080 <created-docker-image>
 ```
 
 Then open `http://localhost:8080` in your browser.
@@ -59,10 +60,12 @@ Each banner file contains 856 lines representing 8 lines of ASCII art per charac
 ### Project Structure
 
 ```
-ascii-art-web/
+ascii-art-web-dockerize/
 ├── asciigenerator/
 │   ├── generator.go
 │   └── utils.go
+├── Dockerfile
+├── .dockerignore
 ├── handlers/
 │   ├── homePageHandler.go
 │   ├── asciiArtHandler.go
@@ -81,4 +84,4 @@ ascii-art-web/
 └── go.mod
 ```
 
-Built using Go standard library.
+Built using Go standard library and Docker.
