@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div class="section">
+      <h1>
+        <span>ASCII</span><span>-</span><span>ART</span> <span>GENERATOR</span>
+      </h1>
+      <form action="/ascii-art" method="post">
+        <textarea
+          name="input"
+          id="input"
+          rows="4"
+          cols="40"
+          maxlength="10000"
+        ></textarea>
+        <div id="labels-holder">
+          <label>
+            <input type="radio" name="banner" value="standard" required checked/>
+            Standard
+          </label>
+
+          <label>
+            <input type="radio" name="banner" value="shadow" /> Shadow
+          </label>
+
+          <label>
+            <input type="radio" name="banner" value="thinkertoy" /> Thinkertoy
+          </label>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="section">
+      <h2>OUTPUT</h2>
+      <div id="pre-holder">
+        <pre>{{.Output}}</pre>
+      </div>
+    </div>
+  </body>
+</html>
