@@ -31,6 +31,7 @@ func GenerateAsciiArt(input string, banner string) (string, error) {
 
 	inputLines := strings.Split(input, "\n")
 	var result string
+	var sb strings.Builder
 	const (
 		AsciiOffset = 32
 		CharHeight  = 9
@@ -42,7 +43,7 @@ func GenerateAsciiArt(input string, banner string) (string, error) {
 			return "", errors.New("400 Only ascii characters 32-126 are allowed")
 		}
 		if line == "" {
-			result += "\n"
+			sb.WriteString("\n")
 			continue
 		}
 		// loop for height - 8 lines per character
@@ -50,10 +51,11 @@ func GenerateAsciiArt(input string, banner string) (string, error) {
 			for _, char := range line {
 				asciiStartLine := (int(char) - AsciiOffset) * CharHeight
 				lineIndex := asciiStartLine + height
-				result += bannerLines[lineIndex]
+				sb.WriteString(bannerLines[lineIndex])
 			}
-			result += "\n"
+			sb.WriteString("\n")
 		}
 	}
+	result = sb.String()
 	return result, nil
 }

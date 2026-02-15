@@ -25,5 +25,6 @@ func ErrorHandler(w http.ResponseWriter, message string, statusCode int) {
 		http.Error(w, message, statusCode)
 		return
 	}
+	w.WriteHeader(statusCode)
 	w.Write(buff.Bytes())
 }

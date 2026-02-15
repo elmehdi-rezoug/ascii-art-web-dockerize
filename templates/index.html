@@ -18,19 +18,20 @@
           rows="4"
           cols="40"
           maxlength="10000"
-        ></textarea>
+        >{{.Input}}</textarea>
         <div id="labels-holder">
+
           <label>
-            <input type="radio" name="banner" value="standard" required checked/>
+            <input type="radio" name="banner" value="standard" required {{if or (eq .Banner "standard") (eq .Banner "")}}checked{{end}}/>
             Standard
           </label>
 
           <label>
-            <input type="radio" name="banner" value="shadow" /> Shadow
+            <input type="radio" name="banner" value="shadow" {{if eq .Banner "shadow"}}checked{{end}} /> Shadow
           </label>
 
           <label>
-            <input type="radio" name="banner" value="thinkertoy" /> Thinkertoy
+            <input type="radio" name="banner" value="thinkertoy" {{if eq .Banner "thinkertoy"}}checked{{end}} /> Thinkertoy
           </label>
         </div>
 

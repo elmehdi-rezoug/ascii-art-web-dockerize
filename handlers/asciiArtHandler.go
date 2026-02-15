@@ -47,8 +47,10 @@ func AsciiArtHandler(w http.ResponseWriter, r *http.Request) {
 	if strings.HasPrefix(output, "\n") {
 		output = "\n" + output
 	}
-
+	
 	data := Data{
+		Banner: banner,
+		Input:  input,
 		Output: output,
 	}
 

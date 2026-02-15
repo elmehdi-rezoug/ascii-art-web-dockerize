@@ -73,6 +73,7 @@ textarea {
   font-size: 20px;
   border: none;
   resize: none;
+  padding: 1%;
 }
 
 textarea:focus {
@@ -120,7 +121,7 @@ label {
   background-color: var(--primary-green);
   height: 100%;
   flex: 1;
-  border: 1.5px solid transparent;
+  border: 2px solid transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,6 +171,7 @@ pre {
   color: var(--white);
   overflow: auto;
   border-radius: var(--radius);
+  padding: 0 2%;
 }
 
 /* Paragraphs inside section */
@@ -239,6 +241,7 @@ span:nth-child(4) {
   textarea {
     height: 30%;
     font-size: 15px;
+    padding: 2%;
   }
   button {
     height: 20%;
@@ -263,4 +266,3 @@ span:nth-child(4) {
     font-size: 16px;
   }
 }
-

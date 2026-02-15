@@ -7,6 +7,8 @@ import (
 )
 
 type Data struct {
+	Banner string
+	Input  string
 	Output string
 }
 
@@ -28,7 +30,7 @@ func HomePageHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	var buff bytes.Buffer
-	err = tmpl.Execute(&buff, nil)
+	err = tmpl.Execute(&buff, Data{})
 	if err != nil {
 		ErrorHandler(w, "500 internal server error", http.StatusInternalServerError)
 		return
