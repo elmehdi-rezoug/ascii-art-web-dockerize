@@ -20,7 +20,7 @@ docker build -t ascii-art-web-dockerize .
 docker run -d -p 8080:8080 ascii-art-web-dockerize
 ```
 
-Then open `http://localhost:8080` in your browser.
+Then open `http://localhost:8080` in your browser. 
 
 ### Using the App
 
